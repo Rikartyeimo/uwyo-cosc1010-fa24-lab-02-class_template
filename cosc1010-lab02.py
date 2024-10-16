@@ -1,8 +1,8 @@
-# Your Name Here
+# Your Name Here : Rikart Yeimo
 # UWYO COSC 1010
-# Submission Date
-# Lab 02 
-# Lab Section: 
+# Submission Date :10/15/2024 
+# Homework 1 
+# Lab Section-5
 # Sources, people worked with, help given to: 
 # your
 # comments
