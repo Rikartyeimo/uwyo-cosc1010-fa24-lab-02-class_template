@@ -11,21 +11,26 @@
 # in different subjects.
 # 
 # Student Data:
-students = [
-    {"name": "Alice", "scores": {"Math": 85, "Science": 90, "English": 78}},
-    {"name": "Bob", "scores": {"Math": 70, "Science": 88, "English": 82}},
-    {"name": "Charlie", "scores": {"Math": 92, "Science": 81, "English": 89}},
-    {"name": "David", "scores": {"Math": 60, "Science": 75, "English": 80}}
-]
+mors_abjad_dictionary = {
+    'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 'F': '..-.', 'G': '--.', 'H': '....',
+    'I': '..', 'J': '.---', 'K': '-.-', 'L': '.-..', 'M': '--', 'N': '-.', 'O': '---', 'P': '.--.',
+    'Q': '--.-', 'R': '.-.', 'S': '...', 'T': '-', 'U': '..-', 'V': '...-', 'W': '.--', 'X': '-..-',
+    'Y': '-.--', 'Z': '--..'
+}
 
-for student in students:
-    name = student["name"]
-    scores = student["scores"].values()
-    average = sum(scores) / len(scores)
-    print(f"{student["name"]} has an average score of {average}")
-    if average > 80:
-        print(f"{name} has a higher average score than 80")
- 
+def plaintext_to_mors(plaintext):
+    plaintext = plaintext.upper()
+    mors_code = " "
+   
+    for abjad in plaintext:
+        if abjad.isalpha():
+            mors_code += mors_abjad_dictionary[abjad] 
+        elif abjad:
+            mors_code += "  "
+    return mors_code.strip()
+Input = input("Please, write word/sentence:")
+output_mors = plaintext_to_mors(Input)
+print("Abjad Result:", output_mors)
 
 #Write a Python program that:
 # 1. Calculates the average score for each student.
